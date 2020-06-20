@@ -64,6 +64,38 @@
       <li class="breadcrumb-item active">Submission</li>
     </ol>
 
+    <div class="row">
+    <div class="col-lg-12">
+        <p>  
+           The following instructions shows how to make a reconstruction in the sparse-mvs setting and submit a evaluation result. 
+        </p>
+        <br>
+        <br>
+        <h2>1. Prepare the data</h2>
+        <hr>
+        <p>  
+           Download the image set and evaluation code (Distance matrix) of DTU dataset from <a href="http://roboimagedata.compute.dtu.dk/?page_id=36">the download page</a>. Pick the testing set from all scan models following <a href="https://arxiv.org/abs/2005.12690">the paper SurfaceNet+</a>. Reconstruct all the models and save the results into ply files.
+        </p>
+        <br>
+        <br>
+        <h2>2. Evaluation </h2>
+        <hr>
+        <h3>2.1 Description </h3>
+        <p>  
+           The precision and recall have two metrics: the distance metric and the percentage metric. The distance metric is the original DTU dataset matlab code (<a href="http://roboimagedata.compute.dtu.dk/?page_id=36">download</a>). The percentage metric is changed by the evaluation code provided by <a href="https://www.tanksandtemples.org/tutorial/">Tanks and Temples</a> (<a href="https://github.com/intel-isl/TanksAndTemples/tree/master/python_toolbox/evaluation">download</a>). The overall score for the percentage metric is measured as the f-score, and a similar measurement for the distance metric overall is given by the average of the mean precision and mean recall. 
+        </p>
+        <h3>2.2 Offline evaluation </h3>
+          <p>  
+           Use the distance metric to count the mean precision(accuracy) and recall(completeness) of each model and count total the mean value of all model in the testing dataset. Use the percentage metric to count the value only at 1mm and 2mm. Count the precision, recall and f-score and count the mean value of all model in the testing dataset. 
+          </p>
+        <br>
+        <br>
+        <h2>3. Submission </h2>
+        <hr>
+      </div>
+      </div>
+  </div>
+
     <!-- Image Header -->
     <!-- <img class="img-fluid rounded mb-4" src="http://placehold.it/1200x300" alt=""> -->
 

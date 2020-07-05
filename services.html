@@ -97,6 +97,60 @@ of all model in the testing dataset. Use the percentage metric to count
 the value only at 1mm and 2mm. Count the precision, recall and f-score 
 and count the mean value of all model in the testing dataset. 
           </p>
+        <h3>2.3 Qualitative evaluation </h3>
+        <div class="row">
+          <div class="col-lg-6 mb-3">
+            <p>  
+             To better show the performance comparison and variation tendency between among methods under different sparsity, we also provide quantitative demonstration with the specific camera poses. The following figure shows the comparision of scan 23 among three different methods under four sparsity:1,3,5,7. 
+             Here we only pick one view of one scan for comparison. We use Meshlab software for our visualization tool. You should show one specific view provided by us of three models in DTU dataset: scan 1, scan 23 and scan 114. The corresponding camera poses in meshlab of each scan are:
+            </p>
+          </div>
+        <div class="col-lg-6 mb-3">
+        <!-- <div class="card h-100 text-center"> -->
+          <img class="card-img-top" src="about_files/qualitative_example.png" alt="">
+          <div class="card-body">
+            <!-- <center><h4 class="card-title">DTU</h4></center> -->
+            
+            <!-- <h6 class="card-subtitle mb-2 text-muted">Position</h6> -->
+            <p class="card-text"></p>
+          </div>
+        </div>
+        <!-- </div> -->
+        </div>
+        <b>scan 1 : </b>
+        <pre>
+     &#60!DOCTYPE ViewState&#62
+      &#60project&#62
+       &#60VCGCamera TranslationVector="-243.076 -83.7638 -411.173 1" LensDistortion="0 0" ViewportPx="1575 978" PixelSizeMm="0.0369161 0.0369161" CenterPx="787 489" FocalMm="31.2669" RotationMatrix="0.55268 -0.754127 0.354735 0 -0.438307 -0.625053 -0.645908 0 0.708825 0.201497 -0.675993 0 0 0 0 1 "/>
+       &#60ViewSettings NearPlane="1.03109" TrackScale="0.00816228" FarPlane="13.0311"/>
+       &#60Render Lighting="0" DoubleSideLighting="0" SelectedVert="0" ColorMode="3" SelectedFace="0" BackFaceCull="0" FancyLighting="0" DrawMode="2" TextureMode="0"/>
+      &#60/project>
+       </pre> 
+       <br>
+       <b>scan 23 : </b>
+       <pre>
+     &#60!DOCTYPE ViewState>
+      &#60project>
+       &#60VCGCamera TranslationVector="-282.768 -47.9743 -516.996 1" LensDistortion="0 0" ViewportPx="1575 978" PixelSizeMm="0.0369161 0.0369161" CenterPx="787 489" FocalMm="31.2669" RotationMatrix="0.354282 -0.851435 0.386708 0 -0.276822 -0.490484 -0.826314 0 0.893226 0.185699 -0.409466 0 0 0 0 1 "/>
+       &#60ViewSettings NearPlane="1.03109" TrackScale="0.00875987" FarPlane="13.0311"/>
+       &#60Render Lighting="0" DoubleSideLighting="0" SelectedVert="0" ColorMode="3" SelectedFace="0" BackFaceCull="0" FancyLighting="0" DrawMode="2" TextureMode="0"/>
+      &#60/project>
+       </pre>
+       <br>
+       <b>scan 114 : </b>
+       <pre>
+     &#60!DOCTYPE ViewState>
+      &#60project>
+       &#60VCGCamera TranslationVector="-161.594 -152.165 -483.126 1" LensDistortion="0 0" ViewportPx="1575 978" PixelSizeMm="0.0369161 0.0369161" CenterPx="787 489" FocalMm="31.2669" RotationMatrix="0.791183 -0.530364 0.304538 0 -0.0815598 -0.585006 -0.806918 0 0.606117 0.613582 -0.506103 0 0 0 0 1 "/>
+       &#60ViewSettings NearPlane="1.03109" TrackScale="0.0090205" FarPlane="13.0311"/>
+       &#60Render Lighting="0" DoubleSideLighting="0" SelectedVert="0" ColorMode="3" SelectedFace="0" BackFaceCull="0" FancyLighting="0" DrawMode="2" TextureMode="0"/>
+      &#60/project>
+       </pre>
+
+       <br>
+       <p>  
+        Here you can just copy the above camera pose text and past it into the <a href="https://www.meshlab.net/">meshlab</a> software, then the viewing direction will automatically ture in to the desired angle. Then clip the "save snapshot" button to record the image.
+        </p>
         <br>
         <br>
         <h2>3. Submission </h2>

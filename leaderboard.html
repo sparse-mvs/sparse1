@@ -4,6 +4,7 @@
 <head>
 
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -15,10 +16,11 @@
 
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
-
+  <!-- <link href="css/sb-admin-2.min.css" rel="stylesheet"> -->
   <!-- <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"> -->
-
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <!-- Custom styles for this template -->
   <!-- <link href="css/sb-admin-2.min.css" rel="stylesheet"> -->
 
@@ -101,14 +103,18 @@
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
+
         <div class="container-fluid">
 
           <!-- Page Heading -->
           <p></p>
+
+          
+
           <h1 class="h3 mb-2 text-gray-800">Tables</h1>
           <p class="mb-4">Quantitative results of reconstruction quality on the <a href="http://roboimagedata.compute.dtu.dk/?page_id=36">DTU dataset</a>. in terms of the distance metric(lower is better) and the percentage metric (see Descriptions for more details) with 1mm and 2mm as thresholds. To understand the experiment settings and evaluation rules, check <a href="services.html">Submissions</a> and <a href="about.html">Description</a>.
           <p>
-          To show the leaderboard at each Sparsity, just search the sparsity index (e.g., search "Five" if sparsity=5 in the search bar and then click the matric you want to rank.). To show the performance changes with sparsity for each method,just click the method colume. </p>
+          To show the leaderboard at each Sparsity, just search the sparsity index (e.g., search "Five" if sparsity=5 in the search bar and then click the matric you want to rank.). To show the performance changes with sparsity for each method,just click the method colume. The reference and the project page of each method can be find in Reference.</p>
 
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
@@ -220,6 +226,73 @@
                     </tr>
                     
                     <tr>
+                      <td>2 (Two)</td>
+                      <td>SurfaceNet+</td>
+                      <td>0.448</td>
+                      <td>0.437</td>
+                      <td>0.442</td>
+                      <td>87.35</td>
+                      <td>73.59</td>
+                      <td>78.29</td>
+                      <td>91.73</td>
+                      <td>78.08</td>
+                      <td>83.21</td>
+                    </tr>
+                    <tr>
+                      <td>2 (Two)</td>
+                      <td>SurfaceNet</td>
+                      <td>0.455</td>
+                      <td>1.011</td>
+                      <td>0.733</td>
+                      <td>81.62</td>
+                      <td>65.79</td>
+                      <td>70.96</td>
+                      <td>86.67</td>
+                      <td>69.77</td>
+                      <td>75.56</td>
+                    </tr>
+                    <tr>
+                      <td>2 (Two)</td>
+                      <td>Gipuma</td>
+                      <td>0.292</td>
+                      <td>1.124</td>
+                      <td>0.708</td>
+                      <td>94.66</td>
+                      <td>55.14</td>
+                      <td>67</td>
+                      <td>96.84</td>
+                      <td>60.87</td>
+                      <td>72.18</td>
+                    </tr>
+                    <tr>
+                      <td>2 (Two)</td>
+                      <td>R-MVSNet</td>
+                      <td>0.471</td>
+                      <td>0.499</td>
+                      <td>0.485</td>
+                      <td>86.96</td>
+                      <td>60.04</td>
+                      <td>67.99</td>
+                      <td>95.05</td>
+                      <td>65.71</td>
+                      <td>74.69</td>
+                    </tr>
+                    <tr>
+                      <td>2 (Two)</td>
+                      <td>COLMAP</td>
+                      <td>0.49</td>
+                      <td>1.108</td>
+                      <td>0.799</td>
+                      <td>82.05</td>
+                      <td>50.58</td>
+                      <td>61.07</td>
+                      <td>89.86</td>
+                      <td>56.76</td>
+                      <td>69.17</td>
+                    </tr>
+
+
+                    <tr>
                       <td>3 (Three)</td>
                       <td>SurfaceNet+</td>
                       <td>0.446</td>
@@ -285,6 +358,20 @@
                       <td>65.77</td>
                     </tr>
 
+                    <tr>
+                      <td>5 (Five)</td>
+                      <td>COLMAP</td>
+                      <td>0.467</td>
+                      <td>1.090</td>
+                      <td>0.778</td>
+                      <td>78.45</td>
+                      <td>49.26</td>
+                      <td>59.62</td>
+                      <td>91.44</td>
+                      <td>55.98</td>
+                      <td>65.77</td>
+                    </tr>
+
                   </tbody>
                 </table>
               </div>
@@ -292,10 +379,111 @@
           </div>
 
         </div>
+
+        <hr>
+        <h1 class="h3 mb-2 text-gray-800">Chart Comparision</h1>
+          <p class="mb-4">The following chart plots the performance in terms of f-score (1mm), which unifies both recall and precision, which corresponds to the results in the tables above. </p>
+          <p>You can click the method in the legend to hide/show each of them.</p>
+          
+          
+        <!-- <div class="col-xl-6 col-lg-12"> -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">F_score comparison</h6>
+            </div>
+            <div class="card-body">
+              <div class="chart-area">
+                <canvas id="myLeaderboardChart" width="400" height="800"></canvas>
+              </div>
+              <hr>
+              Comparison with the existing methods in the <a href="http://roboimagedata.compute.dtu.dk/?page_id=36">DTU dataset</a>.
+            </div>
+          </div>
+        <!-- </div> -->
         <!-- /.container-fluid -->
+
+        <hr>
+        <h1 class="h3 mb-2 text-gray-800">Reference</h1>
+
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>Reference</th>
+              <th>Project Link</th>
+            </tr>
+          </thead>
+          
+          <tbody>
+            <tr class="even">
+                
+                    <td class="Method" text-align="left">SurfaceNet+</td>
+                    
+                    <td class="Reference" text-align="left"><a href="https://arxiv.org/abs/2005.12690" id="SurfaceNet+">SurfaceNet+: An End-to-end 3D Neural Network for Very Sparse Multi-view Stereopsis</a></td>
+
+                    <td class="Project" text-align="left"><a href="https://github.com/mjiUST/SurfaceNet-plus" id="SurfaceNet+">SurfaceNet-plus</a></td>
+                
+            </tr>
+            <tr class="even">
+                
+                    <td class="Method" text-align="left">SurfaceNet</td>
+                    
+                    <td class="Reference" text-align="left"><a href="https://www.researchgate.net/publication/321126305_ICCV2017_SurfaceNet_poster">SurfaceNet: An End-to-end 3D Neural Network for Multiview Stereopsis</a></td>
+
+                    <td class="Project" text-align="left"><a href="https://github.com/mjiUST/SurfaceNet" id="SurfaceNet+">SurfaceNet</a></td>
+                
+            </tr>
+            <tr class="even">
+                
+                    <td class="Method" text-align="left">Gipuma</td>
+                    
+                    <td class="Reference" text-align="left"><a href="">Massively Parallel Multiview Stereopsis by Surface Normal Diffusion</a></td>
+
+                    <td class="Project" text-align="left"><a href="https://github.com/kysucix/gipuma" id="SurfaceNet+">Gipuma</a></td>
+                
+            </tr>
+            <tr class="even">
+                
+                    <td class="Method" text-align="left">COLMAP</td>
+                    
+                    <td class="Reference" text-align="left"><a href="https://colmap.github.io/">COLMAP</a></td>
+
+                    <td class="Project" text-align="left"><a href="https://colmap.github.io/" id="SurfaceNet+">COLMAP</a></td>
+                
+            </tr>
+            <tr class="even">
+                
+                    <td class="Method" text-align="left">R-MVSNet</td>
+                    
+                    <td class="Reference" text-align="left"><a href="https://arxiv.org/abs/1902.10556">Recurrent MVSNet for High-resolution Multi-view Stereo Depth Inference</a></td>
+
+                    <td class="Project" text-align="left"><a href="https://github.com/YoYo000/MVSNet" id="SurfaceNet+">R-MVSNet</a></td>
+                
+            </tr>
+          </tbody>
+        </table>
+        <!-- <thead>
+        <tr>
+        
+            
+            <th class="my_Methods text-left" text-align="left" width="29.5%">method</th>
+            
+        
+            
+            <th class="my_Authors text-left" text-align="left" width="70.5%">Author</th>
+            
+        
+        </tr>
+        </thead> -->
+        
+
 
       </div>
   </div>
+
+
+
+
 
   <!-- /.container -->
 
@@ -320,9 +508,11 @@
   <!-- Page level plugins -->
   <script src="vendor/datatables/jquery.dataTables.min.js"></script>
   <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
+  <script src="vendor/chart.js/Chart.min.js"></script>
   <!-- Page level custom scripts -->
   <script src="js/demo/datatables-demo.js"></script>
+  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/chart_leaderboard.js"></script>
 </body>
 
 </html>
